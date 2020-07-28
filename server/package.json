@@ -1,0 +1,50 @@
+{
+  "name": "year-process",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "prettier": "pretty-quick --staged",
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish --any-branch",
+    "mock": "PORT=8080 umi-serve",
+    "watch_mock": "npm-watch mock"
+  },
+  "watch": {
+    "mock": {
+      "patterns": [
+        "mock"
+      ],
+      "extensions": "js",
+      "quiet": true
+    }
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "16.10.1",
+    "react-dom": "16.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.8",
+    "@types/react": "16.9.3",
+    "@types/react-dom": "16.9.1",
+    "@types/react-redux": "7.1.1",
+    "@types/styled-components": "5.0.1",
+    "cross-env": "6.0.3",
+    "husky": "3.1.0",
+    "next-images": "1.4.0",
+    "np": "5.2.1",
+    "npm-watch": "0.6.0",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.7.2"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
