@@ -1,1 +1,1 @@
-<img src="year-progress.svg" />
+<img src="https://year-progress.jiangweixian1994.vercel.app/api/year" />
