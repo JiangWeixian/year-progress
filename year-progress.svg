@@ -1,36 +1,45 @@
 
-<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
           background-color: #ffffff;
           width: 100%;
-          height: 400px;
+          height: 100px;
+          position: relative;
+          border-radius: 4px;
+          overflow: hidden;
         }
         .bar {
-          height: 28px;
+          height: 100px;
           background-color: #fffe41;
-          animation: toRight ease-in-out 1s forwards;
-          <!-- toRight ease-in-out 1s forwards reverse -->
+          animation: toRight ease-in-out 1s forwards
         }
         @keyframes toRight {
           0% {
             width: 0px;
           }
           100% {
-            width: 100%;
+            width: 90%;
           }
+        }
+        .percent {
+          position: absolute;
+          margin: 0px;
+          right: 8px;
+          bottom: 8px;
+          color: rgb(33, 37, 41);
+          z-index: 1000;
+          font-weight: bold;
+          letter-spacing: 1px;
+          font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+          font-size: 24px;
         }
       </style>
       <div class="container">
         <div class="bar" />
-        <div class="bar" />
-        <div class="bar" />
-        <div class="bar" />
-        <div class="bar" />
-        <div class="bar" />
-        <div class="bar" />
+        <p class="percent">98.23333%</p>
       </div>
     </div>
   </foreignObject>
