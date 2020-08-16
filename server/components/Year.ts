@@ -2,8 +2,9 @@ import dayjs from 'dayjs'
 
 export const createYearOfProgress = () => {
   const now = dayjs()
+  const start = dayjs().startOf('year')
   const end = dayjs().endOf('year')
-  const percent = ((end.unix() - now.unix()) / end.unix()) * 100
+  const percent = ((now.unix() - start.unix()) / (end.unix() - start.unix())) * 100
   return `
 <svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
