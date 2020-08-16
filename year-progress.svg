@@ -4,7 +4,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
-          background-color: #ffffff;
+          background-color: rgb(241, 243, 245);
           width: 100%;
           height: 100px;
           position: relative;
@@ -36,9 +36,21 @@
           font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
           font-size: 24px;
         }
+        .goal {
+          position: absolute;
+          margin: 0px;
+          left: 16px;
+          bottom: 8px;
+          color: rgb(33, 37, 41);
+          z-index: 1000;
+          letter-spacing: 1px;
+          font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+          font-size: 16px;
+        }
       </style>
       <div class="container">
         <div class="bar" />
+        <p class="goal">🅡🅔🅐🅒🅣</p>
         <p class="percent">98.23333%</p>
       </div>
     </div>
