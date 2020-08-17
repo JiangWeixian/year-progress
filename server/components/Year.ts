@@ -1,6 +1,11 @@
 import dayjs from 'dayjs'
 
-export const createYearOfProgress = () => {
+type YearOfProgressProps = {
+  bgColor?: string
+  label?: string
+}
+
+export const createYearOfProgress = ({ bgColor = '#fffe41', ...props }: YearOfProgressProps) => {
   const now = dayjs()
   const start = dayjs().startOf('year')
   const end = dayjs().endOf('year')
@@ -20,7 +25,7 @@ export const createYearOfProgress = () => {
         }
         .bar {
           height: 100px;
-          background-color: #fffe41;
+          background-color: ${bgColor};
           animation: toRight ease-in-out 1s forwards
         }
         @keyframes toRight {
@@ -57,7 +62,7 @@ export const createYearOfProgress = () => {
       </style>
       <div class="container">
         <div class="bar" />
-        <p class="goal">🅡🅔🅐🅒🅣</p>
+        <p class="goal">${props.label}</p>
         <p class="percent">${percent}%</p>
       </div>
     </div>

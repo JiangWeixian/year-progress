@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createYearOfProgress } from '~/components/Year'
 
-export default (_req: NextApiRequest, res: NextApiResponse) => {
+export default (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const yearOfProgress = createYearOfProgress()
+    const { label, bgColor } = req.query as { [key: string]: string }
+    const yearOfProgress = createYearOfProgress({ label, bgColor })
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(yearOfProgress)
   } catch (err) {
