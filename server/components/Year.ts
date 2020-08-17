@@ -5,7 +5,7 @@ type YearOfProgressProps = {
   label?: string
 }
 
-export const createYearOfProgress = ({ bgColor = '#fffe41', ...props }: YearOfProgressProps) => {
+export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOfProgressProps) => {
   const now = dayjs()
   const start = dayjs().startOf('year')
   const end = dayjs().endOf('year')
@@ -62,7 +62,7 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', ...props }: YearOfPr
       </style>
       <div class="container">
         <div class="bar" />
-        <p class="goal">${props.label}</p>
+        <p class="goal">${label}</p>
         <p class="percent">${percent}%</p>
       </div>
     </div>
