@@ -23,6 +23,7 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           position: relative;
           border-radius: 4px;
           overflow: hidden;
+          color: rgb(33, 37, 41);
         }
         .bar {
           height: 100px;
@@ -42,7 +43,6 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           margin: 0px;
           right: 8px;
           bottom: 4px;
-          color: rgb(33, 37, 41);
           z-index: 1000;
           font-weight: bold;
           letter-spacing: 1px;
@@ -54,7 +54,6 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           margin: 0px;
           left: 16px;
           bottom: 8px;
-          color: rgb(33, 37, 41);
           z-index: 1000;
           letter-spacing: 1px;
           font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -64,6 +63,7 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           /* defaults to dark theme */
           .container {
             background-color: #22272E;
+            color: white;
           }
         }
       </style>
