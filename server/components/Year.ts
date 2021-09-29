@@ -63,7 +63,7 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           /* defaults to dark theme */
           .container {
             background-color: #22272E;
-            color: white;
+            color: #4299e1;
           }
         }
       </style>
