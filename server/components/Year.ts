@@ -15,6 +15,7 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
+        
         .container {
           background-color: rgb(241, 243, 245);
           width: 100%;
@@ -58,6 +59,12 @@ export const createYearOfProgress = ({ bgColor = '#fffe41', label = '' }: YearOf
           letter-spacing: 1px;
           font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
           font-size: 16px;
+        }
+        @media (prefers-color-scheme: dark) {
+          /* defaults to dark theme */
+          .container {
+            background-color: #22272E;
+          }
         }
       </style>
       <div class="container">
